@@ -1,13 +1,18 @@
-import styled from 'styled-components';
-import { shade } from 'polished';
+import styled, { css } from 'styled-components';
 
-export const Container = styled.div`
+interface ContainerProps {
+  isFocused: boolean;
+  isField: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   background: #232129;
   border-radius: 10px;
-  border: 2px solid #232129;
   padding: 16px;
   width: 100%;
-  color: #f4ede8;
+
+  border: 2px solid #232129;
+  color: #666360;
 
   display: flex;
   align-items: center;
@@ -15,6 +20,19 @@ export const Container = styled.div`
   & + div {
     margin-top: 8px;
   }
+
+  ${props =>
+    props.isFocused &&
+    css`
+      color: #ff9000;
+      border-color: #ff9000;
+    `}
+
+  ${props =>
+    props.isField &&
+    css`
+      color: #ff9000;
+    `}
 
   input {
     flex: 1;
@@ -33,6 +51,5 @@ export const Container = styled.div`
 
   svg {
     margin-right: 16px;
-    color: #666360;
   }
 `;
