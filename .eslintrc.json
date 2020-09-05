@@ -29,8 +29,13 @@
       "prettier"
   ],
   "rules": {
+    "import/no-unresolved": [
+      2,
+      { "caseSensitive": false }
+    ],
     "camelcase": "off",
     "no-unused-expressions":"off",
+    "@typescript-eslint/ban-types":"off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "react/jsx-one-expression-per-line": "off",
