@@ -86,7 +86,7 @@ const Profile: React.FC = () => {
 
         addToast({
           type: 'success',
-          title: 'Perfil realizado!',
+          title: 'Perfil atualizado!',
           description:
             'Suas informações do perfil foram ataulizadas com sucesso',
         });
